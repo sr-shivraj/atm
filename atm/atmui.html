@@ -14,42 +14,54 @@
 
 <body>
     <div class="container-fluid" style="padding: 235px; background-color: #242582;">
+        <div id="c1" style="display: block;">
         <div class="card mx-auto p-5" style="width: 40%; background-color: #CBD5F0;">
-            <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded" style="font-size: 15px;">
+            <p class="text-center text-white bg-primary p-3 font-weight-bolder rounded" style="font-size: 15px;">
                 Please enter your pin number</p>
             <input type="text" name="number" placeholder="Enter PIN" id="number" class="form-control p-4 mt-4" />
             <input type="button" name="submit" onclick="getaction()" value="Submite" class="btn btn-info mt-3" />
             <p id="pin"> </p>
         </div>
-        <div class="card mx-auto p-5" style="width: 40%; background-color: #CBD5F0;">
-            <div id="option" class="p-3">
-                <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded">Select Transaction</p>
-                <div class="bg-info p-1 text-center mb-2">
-                    <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="1" />Balance
-                </div>
-                <div class="bg-info p-1 text-center mb-2">
-                    <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="2" />Deposite
-                </div>
-                <div class="bg-info p-1 text-center mb-2">
-                    <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="3" />Withdraw<br>
-                </div>
-            </div>
-        </div>
-        <div class="card mx-auto p-5" style="width: 40%; background-color: #CBD5F0;">
-            <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded">Balance Amount</p>
-            <p id="balance" class="p1 text-center text-white bg-info p-1 rounded mt-2"></p>
-        </div>
-        <div  class="card mx-auto p-5" style="width: 40%; background-color: #CBD5F0;">
-            <div  class="p-3">
-                <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded" style="font-size: 15px;">
-                    Deposite Amount</p>
-                <input type="text" name="amount1" id="amount1" value="" placeholder="Enter Amount"
-                    class="form-control p-4 mt-4" />
-                <input type="submit" name="submit1" value="submit" onclick="getamount()" class="btn btn-block btn-info mt-3" />
-            </div>
-        </div>
-        
     </div>
+    <div id="c2" style="display: none;">
+        <div class="card mx-auto p-5 option" style="width: 40%; background-color: #CBD5F0;">
+            <p class="text-center text-white bg-primary p-3 font-weight-bolder rounded">Select Transaction</p>
+            <div class="bg-info p-1 text-center mb-2">
+                <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="1" />Balance
+            </div>
+            <div class="bg-info p-1 text-center mb-2">
+                <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="2" />Deposite
+            </div>
+            <div class="bg-info p-1 text-center mb-2">
+                <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="3" />Withdraw<br>
+            </div>
+        </div>
+    </div>
+        <div class="card c3 mx-auto p-5" style=" display: none; width: 40%; background-color: #CBD5F0;">
+            <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded">Balance Amount</p>
+            <p id="balance" class="text-center text-dark bg-white p-4 rounded"></p>
+        </div>
+        <div class="card c4 mx-auto p-5" style="display: none; width: 40%; background-color: #CBD5F0;">
+            <p class="text-center text-white bg-primary p-3 font-weight-bolder rounded" style="font-size: 15px;">
+                Deposite Amount</p>
+            <input type="text" name="amount1" id="amount1" value="" placeholder="Enter Amount"
+                class="form-control p-4" />
+            <input type="submit" name="submit1" value="submit" onclick="getamount()"
+                class="btn btn-block btn-info mt-2" />
+            <p id="remaining_amount1" class="text-center text-dark bg-white p-4 rounded mt-2" style="display: none;"></p>
+        </div>
+        <div class="card c5 mx-auto p-5" style="display: none; width: 40%; background-color: #CBD5F0;">
+            <p class="p2 text-center text-white bg-primary p-3 font-weight-bolder rounded" style="font-size: 15px;">
+                Withdraw Amount</p>
+            <input type="text" name="amount1" id="amount1" value="" placeholder="Enter Amount"
+                class="form-control p-4" />
+            <input type="submit" name="submit1" value="submit" onclick="getamount1()"
+                class="btn btn-block btn-info mt-2" />
+            <p id="remaining_amount12" class="text-center text-white bg-info p-1 rounded mt-2" style="display: none;"></p>
+        </div>
+    </div>
+
+    <script src="atm.js"></script>
 
 </body>
 
