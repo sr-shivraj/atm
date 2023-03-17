@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid" style="padding: 235px; background-color: #242582;">
+        <div class="card mx-auto p-5" style="width: 40%; background-color: #CBD5F0;">
+            <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded" style="font-size: 15px;">
+                Please enter your pin number</p>
+            <input type="text" name="number" placeholder="Enter PIN" id="number" class="form-control p-4 mt-4" />
+            <input type="button" name="submit" onclick="getaction()" value="Submite" class="btn btn-info mt-3" />
+            <p id="pin"> </p>
+        </div>
+        <div class="card mx-auto p-5" style="width: 40%; background-color: #CBD5F0;">
+            <div id="option" class="p-3">
+                <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded">Select Transaction</p>
+                <div class="bg-info p-1 text-center mb-2">
+                    <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="1" />Balance
+                </div>
+                <div class="bg-info p-1 text-center mb-2">
+                    <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="2" />Deposite
+                </div>
+                <div class="bg-info p-1 text-center mb-2">
+                    <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="3" />Withdraw<br>
+                </div>
+            </div>
+        </div>
+        <div class="card mx-auto p-5" style="width: 40%; background-color: #CBD5F0;">
+            <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded">Balance Amount</p>
+            <p id="balance" class="p1 text-center text-white bg-info p-1 rounded mt-2"></p>
+        </div>
+        <div  class="card mx-auto p-5" style="width: 40%; background-color: #CBD5F0;">
+            <div  class="p-3">
+                <p class="p1 text-center text-white bg-primary p-3 font-weight-bolder rounded" style="font-size: 15px;">
+                    Deposite Amount</p>
+                <input type="text" name="amount1" id="amount1" value="" placeholder="Enter Amount"
+                    class="form-control p-4 mt-4" />
+                <input type="submit" name="submit1" value="submit" onclick="getamount()" class="btn btn-block btn-info mt-3" />
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

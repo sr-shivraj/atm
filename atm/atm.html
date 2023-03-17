@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+</head>
+
+<body>
+
+    <form>Please enter your pin number
+        <input type="text" name="number" id="number" />
+        <input type="button" name="submit" onclick="getaction()" value="go" />
+        <p id="pin"> </p>
+
+        <div id="option" style="display: none;">
+            <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="1" />Balance
+            <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="2" />Deposite
+            <input type="checkbox" name="checkbox" onclick="myfunction(this.value)" value="3" />Withdraw
+        </div>
+        <p id="balance"></p>
+
+        <div id="display1" style="display: none;">
+            <label>Please enter your deposite amount</label>
+            <input type="text" name="amount1" id="amount1" value="" />
+            <input type="submit" name="submit1" value="submit" onclick="getamount()" />
+            <div id="remaining_amount1"></div>
+        </div>
+        <p id="remaining_amount1"></p>
+
+        <div id="display2" style="display: none;">
+            <label>Please enter your withdraw amount</label>
+            <input type="text" name="amount2" id="amount2" value="" />
+            <input type="submit" name="submit1" value="submit" onclick="getamount1()" />
+        </div>
+        <p id="remaining_amount2"></p>
+
+    </form>
+
+    <script src="atm.js"></script>
+</body>
+
+</html>
